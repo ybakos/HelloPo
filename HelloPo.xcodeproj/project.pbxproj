@@ -1,0 +1,229 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F93D2174190C606400137E0E /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = F93D2173190C606400137E0E /* AppDelegate.mm */; };
+		F93D2176190C606400137E0E /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = F93D2175190C606400137E0E /* en.strings */; };
+		F93D2178190C606400137E0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D2177190C606400137E0E /* main.m */; };
+		F93D217A190C606400137E0E /* main.pch in Resources */ = {isa = PBXBuildFile; fileRef = F93D2179190C606400137E0E /* main.pch */; };
+		F93D217D190C606400137E0E /* main.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93D217C190C606400137E0E /* main.xib */; };
+		F93D2180190C606400137E0E /* poOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = F93D217F190C606400137E0E /* poOpenGLView.mm */; };
+		F93D2184190C606400137E0E /* HelloPoApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F93D2183190C606400137E0E /* HelloPoApp.cpp */; };
+		F93D2186190C606400137E0E /* AppConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F93D2185190C606400137E0E /* AppConfig.cpp */; };
+		F93D2188190C606400137E0E /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F93D2187190C606400137E0E /* OpenSans-Regular.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F93D216C190C606400137E0E /* HelloPo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloPo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93D2170190C606400137E0E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../platform/Debug.xcconfig; sourceTree = "<group>"; };
+		F93D2171190C606400137E0E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../platform/Release.xcconfig; sourceTree = "<group>"; };
+		F93D2172190C606400137E0E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../platform/AppDelegate.h; sourceTree = "<group>"; };
+		F93D2173190C606400137E0E /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ../platform/AppDelegate.mm; sourceTree = "<group>"; };
+		F93D2175190C606400137E0E /* en.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en.strings; path = ../platform/en.strings; sourceTree = "<group>"; };
+		F93D2177190C606400137E0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../platform/main.m; sourceTree = "<group>"; };
+		F93D2179190C606400137E0E /* main.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = main.pch; path = ../platform/main.pch; sourceTree = "<group>"; };
+		F93D217B190C606400137E0E /* main.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = main.plist; path = ../platform/main.plist; sourceTree = "<group>"; };
+		F93D217C190C606400137E0E /* main.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = main.xib; path = ../platform/main.xib; sourceTree = "<group>"; };
+		F93D217E190C606400137E0E /* poOpenGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = poOpenGLView.h; path = ../platform/poOpenGLView.h; sourceTree = "<group>"; };
+		F93D217F190C606400137E0E /* poOpenGLView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = poOpenGLView.mm; path = ../platform/poOpenGLView.mm; sourceTree = "<group>"; };
+		F93D2182190C606400137E0E /* HelloPoApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloPoApp.h; sourceTree = "<group>"; };
+		F93D2183190C606400137E0E /* HelloPoApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HelloPoApp.cpp; sourceTree = "<group>"; };
+		F93D2185190C606400137E0E /* AppConfig.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AppConfig.cpp; sourceTree = "<group>"; };
+		F93D2187190C606400137E0E /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../platform/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F93D2169190C606400137E0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F93D2163190C606400137E0E = {
+			isa = PBXGroup;
+			children = (
+				F93D216E190C606400137E0E /* HelloPo */,
+				F93D216D190C606400137E0E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F93D216D190C606400137E0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F93D216C190C606400137E0E /* HelloPo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F93D216E190C606400137E0E /* HelloPo */ = {
+			isa = PBXGroup;
+			children = (
+				F93D216F190C606400137E0E /* platform */,
+				F93D2181190C606400137E0E /* application */,
+			);
+			path = HelloPo;
+			sourceTree = "<group>";
+		};
+		F93D216F190C606400137E0E /* platform */ = {
+			isa = PBXGroup;
+			children = (
+				F93D2170190C606400137E0E /* Debug.xcconfig */,
+				F93D2171190C606400137E0E /* Release.xcconfig */,
+				F93D2172190C606400137E0E /* AppDelegate.h */,
+				F93D2173190C606400137E0E /* AppDelegate.mm */,
+				F93D2175190C606400137E0E /* en.strings */,
+				F93D2177190C606400137E0E /* main.m */,
+				F93D2179190C606400137E0E /* main.pch */,
+				F93D217B190C606400137E0E /* main.plist */,
+				F93D217C190C606400137E0E /* main.xib */,
+				F93D217E190C606400137E0E /* poOpenGLView.h */,
+				F93D217F190C606400137E0E /* poOpenGLView.mm */,
+				F93D2187190C606400137E0E /* OpenSans-Regular.ttf */,
+			);
+			name = platform;
+			sourceTree = "<group>";
+		};
+		F93D2181190C606400137E0E /* application */ = {
+			isa = PBXGroup;
+			children = (
+				F93D2182190C606400137E0E /* HelloPoApp.h */,
+				F93D2183190C606400137E0E /* HelloPoApp.cpp */,
+				F93D2185190C606400137E0E /* AppConfig.cpp */,
+			);
+			name = application;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F93D216B190C606400137E0E /* HelloPo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F93D218B190C606400137E0E /* Build configuration list for PBXNativeTarget "HelloPo" */;
+			buildPhases = (
+				F93D2168190C606400137E0E /* Sources */,
+				F93D2169190C606400137E0E /* Frameworks */,
+				F93D216A190C606400137E0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloPo;
+			productName = HelloPo;
+			productReference = F93D216C190C606400137E0E /* HelloPo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F93D2164190C606400137E0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = F93D2167190C606400137E0E /* Build configuration list for PBXProject "HelloPo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F93D2163190C606400137E0E;
+			productRefGroup = F93D216D190C606400137E0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F93D216B190C606400137E0E /* HelloPo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F93D216A190C606400137E0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93D217D190C606400137E0E /* main.xib in Resources */,
+				F93D217A190C606400137E0E /* main.pch in Resources */,
+				F93D2188190C606400137E0E /* OpenSans-Regular.ttf in Resources */,
+				F93D2176190C606400137E0E /* en.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F93D2168190C606400137E0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93D2178190C606400137E0E /* main.m in Sources */,
+				F93D2174190C606400137E0E /* AppDelegate.mm in Sources */,
+				F93D2180190C606400137E0E /* poOpenGLView.mm in Sources */,
+				F93D2184190C606400137E0E /* HelloPoApp.cpp in Sources */,
+				F93D2186190C606400137E0E /* AppConfig.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F93D2189190C606400137E0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F93D2170190C606400137E0E /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		F93D218A190C606400137E0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F93D2171190C606400137E0E /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		F93D218C190C606400137E0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		F93D218D190C606400137E0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F93D2167190C606400137E0E /* Build configuration list for PBXProject "HelloPo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93D2189190C606400137E0E /* Debug */,
+				F93D218A190C606400137E0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F93D218B190C606400137E0E /* Build configuration list for PBXNativeTarget "HelloPo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93D218C190C606400137E0E /* Debug */,
+				F93D218D190C606400137E0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F93D2164190C606400137E0E /* Project object */;
+}
