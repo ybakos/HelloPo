@@ -16,6 +16,7 @@
 		F93D2184190C606400137E0E /* HelloPoApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F93D2183190C606400137E0E /* HelloPoApp.cpp */; };
 		F93D2186190C606400137E0E /* AppConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F93D2185190C606400137E0E /* AppConfig.cpp */; };
 		F93D2188190C606400137E0E /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F93D2187190C606400137E0E /* OpenSans-Regular.ttf */; };
+		F93D2190190CC13600137E0E /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F93D218F190CC13600137E0E /* Particle.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		F93D2183190C606400137E0E /* HelloPoApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HelloPoApp.cpp; sourceTree = "<group>"; };
 		F93D2185190C606400137E0E /* AppConfig.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AppConfig.cpp; sourceTree = "<group>"; };
 		F93D2187190C606400137E0E /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../platform/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		F93D218E190CC12F00137E0E /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
+		F93D218F190CC13600137E0E /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				F93D2182190C606400137E0E /* HelloPoApp.h */,
+				F93D218E190CC12F00137E0E /* Particle.h */,
+				F93D218F190CC13600137E0E /* Particle.cpp */,
 				F93D2183190C606400137E0E /* HelloPoApp.cpp */,
 				F93D2185190C606400137E0E /* AppConfig.cpp */,
 			);
@@ -167,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F93D2178190C606400137E0E /* main.m in Sources */,
+				F93D2190190CC13600137E0E /* Particle.cpp in Sources */,
 				F93D2174190C606400137E0E /* AppDelegate.mm in Sources */,
 				F93D2180190C606400137E0E /* poOpenGLView.mm in Sources */,
 				F93D2184190C606400137E0E /* HelloPoApp.cpp in Sources */,

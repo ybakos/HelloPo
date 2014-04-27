@@ -4,6 +4,8 @@
 
 #include "poObject.h"
 
+class poOvalShape;
+
 class HelloPoApp : public poObject {
 public:
 	HelloPoApp();
@@ -16,5 +18,10 @@ public:
     virtual void eventHandler(poEvent *event);
 	
     virtual void messageHandler(const std::string &msg, const poDictionary& dict=poDictionary());
+private:
+    poOvalShape* dot;
+    int x;
+    int y;
+
 };
 

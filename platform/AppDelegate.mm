@@ -60,19 +60,16 @@ std::map<NSView*,NSDictionary*> windows_fullscreen_restore;
 					type:(poWindowType)type 
 				   frame:(NSRect)frame 
 				   title:(const char*)str
-{
+    {
 	NSScreen *screen = nil;
 	NSEnumerator *screens = [[NSScreen screens] objectEnumerator];
 	while((screen = [screens nextObject])) {
-		if(NSPointInRect(frame.origin, [screen frame]))
-			break;
+		if (NSPointInRect(frame.origin, [screen frame])) break;
 	}
-	if(!screen) {
-		screen = NSScreen.mainScreen;
-	}
+	if (!screen) screen = NSScreen.mainScreen;
 	
 	NSUInteger style_mask;
-	switch(type) {
+	switch (type) {
 		case WINDOW_TYPE_FULLSCREEN:
 			frame = [screen frame];
 			// we still want the borderless mask so let it fall thru
@@ -93,7 +90,7 @@ std::map<NSView*,NSDictionary*> windows_fullscreen_restore;
 	CGLLockContext(cglcontext);
 	// make sure we're tied to the vsync
 	GLint swapInt = 1;
-	[context setValues:&swapInt forParameter:NSOpenGLCPSwapInterval];	
+	[context setValues:&swapInt forParameter:NSOpenGLCPSwapInterval];
 	// make our window, using the opengl context we just made
 	poWindow *powin = new poWindow(str, appId, rectFromNSRect(frame));
 	// and let it go
@@ -107,24 +104,20 @@ std::map<NSView*,NSDictionary*> windows_fullscreen_restore;
     
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowWillClose:) name:NSWindowWillCloseNotification object:window];
 	
+    // configure the window a little
 	[window setFrameOrigin:frame.origin];
-	
-	// configure the window a little
-	[window setAcceptsMouseMovedEvents:YES];
+    [window setAcceptsMouseMovedEvents:YES];
 	[window setReleasedWhenClosed:YES];
-    
-	// in case its full screen
-	if(type == WINDOW_TYPE_FULLSCREEN) {
+	// in case it's full screen
+	if (type == WINDOW_TYPE_FULLSCREEN) {
 		[window setLevel:NSMainMenuWindowLevel+1];
 		[window setOpaque:YES];
 		[window setHidesOnDeactivate:YES];
-		
 		powin->setFullscreen(true);
 	}
     
 	NSRect glrect = frame;
 	glrect.origin = NSMakePoint(0.f, 0.f);
-	
 	poOpenGLView *opengl = [[poOpenGLView alloc] initWithFrame:glrect];
 	opengl.openGLContext = context;
 	// give the gl view an app window to draw
@@ -134,7 +127,6 @@ std::map<NSView*,NSDictionary*> windows_fullscreen_restore;
 	
 	[window setContentView:opengl];
 	[opengl release];
-    
 	[window makeKeyAndOrderFront:self];
 	
 	return powin;
@@ -149,12 +141,9 @@ std::map<NSView*,NSDictionary*> windows_fullscreen_restore;
 						  [NSValue valueWithRect:[window frame]], @"WINDOW_FRAME",
 						  nil];
 	[window_settings setObject:dict forKey:[NSValue valueWithNonretainedObject:window]];
-	
 	NSScreen *screen = [window deepestScreen];
-	
 	[window setStyleMask:NSBorderlessWindowMask];
 	[window setFrame:[screen frame] display:YES animate:NO];
-    
 	[window setLevel:NSMainMenuWindowLevel+1];
 	[window setOpaque:YES];
 	[window setHidesOnDeactivate:YES];
@@ -164,11 +153,9 @@ std::map<NSView*,NSDictionary*> windows_fullscreen_restore;
 	NSDictionary *dict = [window_settings objectForKey:[NSValue valueWithNonretainedObject:window]];
 	NSRect frame = [[dict objectForKey:@"WINDOW_FRAME"] rectValue];
 	[window_settings removeObjectForKey:[NSValue valueWithNonretainedObject:window]];
-	
 	[window setStyleMask:NSTitledWindowMask | NSClosableWindowMask | NSMiniaturizableWindowMask | NSResizableWindowMask];
 	[window setFrame:frame display:YES animate:NO];
 	[window setFrameOrigin:frame.origin];
-	
 	[window setLevel:NSNormalWindowLevel];
 	[window setOpaque:NO];
 	[window setHidesOnDeactivate:NO];
@@ -176,13 +163,9 @@ std::map<NSView*,NSDictionary*> windows_fullscreen_restore;
 
 -(void)fullscreenWindow:(poWindow*)window value:(BOOL)b {
 	window->setFullscreen(b);
-    
 	NSWindow *win = (NSWindow*)window->getWindowHandle();
-	
 	SEL function = @selector(fullscreenWindow:);
-	if(!b)
-		function = @selector(restoreWindow:);
-	
+	if (!b) function = @selector(restoreWindow:);
 	[self performSelectorOnMainThread:function withObject:win waitUntilDone:NO];
 }
 
@@ -219,7 +202,7 @@ void applicationMakeWindowCurrent(poWindow* win) {
 }
 
 void applicationMakeWindowFullscreen(poWindow* win, bool value) {
-	if(win->isFullscreen() != value) {
+	if (win->isFullscreen() != value) {
 		AppDelegate *app = [NSApplication sharedApplication].delegate;
 		[app fullscreenWindow:win value:value];
 	}
