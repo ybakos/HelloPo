@@ -14,7 +14,7 @@ poObject *createObjectForID(uint uid) {
 
 void setupApplication() {
     poRandSeed();
-	applicationCreateWindow(0, WINDOW_TYPE_NORMAL, "HelloPo", 100, 100, 1024, 768);
+	applicationCreateWindow(0, WINDOW_TYPE_FULLSCREEN, "HelloPo", 100, 100, 1024, 768);
 }
 
 void cleanupApplication() {
